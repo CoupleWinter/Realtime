@@ -109,6 +109,7 @@ if __name__ == '__main__':
     video_capture = WebcamVideoStream(src=args.video_source,
                                       width=args.width,
                                       height=args.height).start()
+    # 存储开始时间，结束时间和总帧数
     fps = FPS().start()
 
     while True:  # fps._numFrames < 120
