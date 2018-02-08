@@ -1,4 +1,4 @@
-
+# coding=utf-8
 import os
 import cv2
 import time
@@ -119,6 +119,7 @@ if __name__ == '__main__':
             class_names = data['class_names']
             class_colors = data['class_colors']
             for point, name, color in zip(rec_points, class_names, class_colors):
+                # 绘制矩形
                 cv2.rectangle(frame, (int(point['xmin'] * args.width), int(point['ymin'] * args.height)),
                               (int(point['xmax'] * args.width), int(point['ymax'] * args.height)), color, 3)
                 cv2.rectangle(frame, (int(point['xmin'] * args.width), int(point['ymin'] * args.height)),
